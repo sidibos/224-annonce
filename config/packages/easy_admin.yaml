@@ -1,7 +1,29 @@
 easy_admin:
+    list:
+        max_results: 15
+    formats:
+        date: 'd/m/Y'
+        time: 'H:i'
+        datetime: 'd/m/Y H:i:s'
     entities:
         # List the entity class name you want to manage
-        - App\Entity\User
-        - App\Entity\Ad
+        User:
+          class: App\Entity\User
+          label: 'Users'
+        Ad:
+          class: App\Entity\Ad
+          label: 'Ads'
+#        - App\Entity\User
+#        - App\Entity\Ad
 #        - App\Entity\Category
 #        - App\Entity\User
+    site_name: 'Annonce Back Office'
+
+    user:
+        display_name: true
+        display_avatar: false
+
+    design:
+        brand_color: '#1ABC9C'
+        assets:
+           favicon: '/assets/backoffice/favicon-16x16.png'
